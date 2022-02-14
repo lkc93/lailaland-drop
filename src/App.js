@@ -10,6 +10,16 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
   const [walletAddress, setWalletAddress] = useState(null);
+  const [showWinter, setShowWinter] = useState(false);
+
+  window.addEventListener('message', (event) => {
+    console.log(`Received message: ${event.data}`);
+
+    if (event.data == 'closeWinterCheckoutModal') {
+      setShowWinter(false);
+    }
+
+  });
 
   const images = [
     {
@@ -88,15 +98,10 @@ const App = () => {
   };
 
 
-  const connectWallet = async () => {
-    const { solana } = window;
-
-    if (solana) {
-      const response = await solana.connect();
-      console.log('Connected with Public Key:', response.publicKey.toString());
-      setWalletAddress(response.publicKey.toString());
-    }
+  const toggleWinter = async () => {
+    setShowWinter(true)
   };
+
   /*
    * We want to render this UI when the user hasn't connected
    * their wallet to our app yet.
@@ -104,7 +109,7 @@ const App = () => {
   const renderNotConnectedContainer = () => (
     <button
       className="cta-button connect-wallet-button"
-      onClick={connectWallet}
+      onClick={toggleWinter}
     >
       Pay with Bank Account
     </button>
@@ -120,14 +125,16 @@ const App = () => {
 
   return (
     <div className="App">
+      {showWinter && (<iframe id="winter-checkout" src="https://winter-checkout.onrender.com/?projectId=911" allowtransparency="true" className="winter-iframe" ></iframe>)}
       {/* <ImageGallery className="img-gallery" items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} /> */}
       <div className="container">
         <div className="header-container">
-          <p className="header">✨ Lailaland</p>
+          <p className="header">✨ Lailaland NFTs</p>
           <p className="sub-text">Beautiful places I've seen, loved and photographed. Minted with a <b>very</b> special checkout!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
         {walletAddress && <CandyMachine walletAddress={window.solana} />}
+
 
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
