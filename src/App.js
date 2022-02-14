@@ -5,7 +5,7 @@ import CandyMachine from './CandyMachine';
 import ImageGallery from 'react-image-gallery';
 
 // Constants
-const TWITTER_HANDLE = 'lailachima';
+const TWITTER_HANDLE = 'winter_NFTs';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
@@ -136,7 +136,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built by @${TWITTER_HANDLE}`}</a>
+          >{`say hi! @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>
