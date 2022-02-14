@@ -120,7 +120,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <ImageGallery className="img-gallery" items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} />
+      {/* <ImageGallery className="img-gallery" items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} /> */}
       <div className="container">
         <div className="header-container">
           <p className="header">✨ Lailaland</p>
