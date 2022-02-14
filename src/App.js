@@ -123,7 +123,7 @@ const App = () => {
       {/* <ImageGallery className="img-gallery" items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} /> */}
       <div className="container">
         <div className="header-container">
-          <p className="header">✨ Lailaland</p>
+          <p className="header">✨ Lailaland NFT drop</p>
           <p className="sub-text">Beautiful places I've seen and loved. Check out the checkout!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
