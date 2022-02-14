@@ -1,7 +1,8 @@
 .App {
   height: 100vh;
   /* background-color: #5f5c6b; */
-  background-color: #4a4649;
+  /* background-color: #4a4649; */
+  background-image: url("./nft-drop-gradient.png");
   /* background-color: rgb(20, 20, 20); */
   overflow: scroll;
   text-align: center;
@@ -63,7 +64,8 @@
 
 .connect-wallet-button {
   color: white;
-  background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+  background: -webkit-linear-gradient(left, #302f2f, #615c66);
+  /* background-color: #423f3f; */
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
