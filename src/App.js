@@ -123,8 +123,8 @@ const App = () => {
       {/* <ImageGallery className="img-gallery" items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} /> */}
       <div className="container">
         <div className="header-container">
-          <p className="header">✨ Lailaland NFT drop</p>
-          <p className="sub-text">Beautiful places I've seen and loved. Check out the checkout!</p>
+          <p className="header">✨ Lailaland</p>
+          <p className="sub-text">Beautiful places I've seen, loved and photographed. Minted with a <b>very</b> special checkout!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
         {walletAddress && <CandyMachine walletAddress={window.solana} />}
