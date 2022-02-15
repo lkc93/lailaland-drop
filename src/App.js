@@ -28,7 +28,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <p className="header">✨ Lailaland NFTs</p>
-          <p className="sub-text">Beautiful places I've seen, loved and photographed. Minted with a <b>very</b> special checkout!</p>
+          <p className="sub-text">Beautiful places I've seen, loved and photographed. Minted on Solana with a <b>very</b> special checkout!</p>
           <button
             className="cta-button connect-wallet-button"
             onClick={toggleWinter}
