@@ -18,7 +18,6 @@ const App = () => {
     if (event.data == 'closeWinterCheckoutModal') {
       setShowWinter(false);
     }
-
   });
 
   const images = [
@@ -125,7 +124,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {showWinter && (<iframe id="winter-checkout" src="https://winter-checkout.onrender.com/?projectId=911" allowtransparency="true" className="winter-iframe" ></iframe>)}
+      {showWinter && (<iframe id="winter-checkout" src="https://checkout.usewinter.com/?projectId=1" allowtransparency="true" className="winter-iframe" ></iframe>)}
       {/* <ImageGallery className="img-gallery" items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} /> */}
       <div className="container">
         <div className="header-container">
@@ -133,9 +132,10 @@ const App = () => {
           <p className="sub-text">Beautiful places I've seen, loved and photographed. Minted with a <b>very</b> special checkout!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
-        {walletAddress && <CandyMachine walletAddress={window.solana} />}
+        {/* {walletAddress && <CandyMachine walletAddress={window.solana} />} */}
 
 
+        <CandyMachine />
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
