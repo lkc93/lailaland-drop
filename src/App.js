@@ -110,7 +110,7 @@ const App = () => {
       className="cta-button connect-wallet-button"
       onClick={toggleWinter}
     >
-      Pay with Bank Account
+      MINT YOUR NFT
     </button>
   );
 
@@ -132,10 +132,8 @@ const App = () => {
           <p className="sub-text">Beautiful places I've seen, loved and photographed. Minted with a <b>very</b> special checkout!</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
-        {/* {walletAddress && <CandyMachine walletAddress={window.solana} />} */}
 
-
-        <CandyMachine />
+        <CandyMachine className="header" />
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a

@@ -105,15 +105,15 @@ const CandyMachine = () => {
     });
   };
 
+  const itemsMinted = candyMachine != null ? candyMachine.state.itemsAvailable - candyMachine.state.itemsRedeemed : null;
 
   return (
+
     candyMachine && (
       <div className="machine-container">
-        {/* <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p> */}
-        <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
-        {/* <button className="cta-button mint-button" onClick={mintToken}>
-          Mint NFT
-      </button> */}
+        {itemsMinted && (
+          <p className="header">{`${itemsMinted} / ${candyMachine.state.itemsAvailable} mints remaining`}</p>
+        )}
       </div>
     )
   )

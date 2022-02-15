@@ -1,6 +1,12 @@
 .machine-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 100px;
+  /* flex-grow: 1; */
+  /* padding-top: 50px; */
 }
 
 .gif-container {
