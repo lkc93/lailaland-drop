@@ -29,15 +29,17 @@ const App = () => {
         <div className="header-container">
           <p className="header">✨ Lailaland NFTs</p>
           <p className="sub-text">Beautiful places I've seen, loved and photographed. Minted on Solana with a <b>very</b> special checkout!</p>
-          <button
+          {/* <button
             className="cta-button connect-wallet-button"
             onClick={toggleWinter}
           >
             MINT YOUR NFT
-          </button>
+          </button> */}
         </div>
 
-        <CandyMachine className="header" />
+        <p className="header">We're out of mints in this drop. Thanks for the love! </p>
+
+        {/* <CandyMachine className="header" /> */}
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
