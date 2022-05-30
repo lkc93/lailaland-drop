@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
-import CandyMachine from './CandyMachine';
+import { WinterCheckout } from '@usewinter/checkout';
 
 // Constants
 const TWITTER_HANDLE = 'winter_NFTs';
@@ -13,7 +13,7 @@ const App = () => {
   window.addEventListener('message', (event) => {
     console.log(`Received message: ${event.data}`);
 
-    if (event.data == 'closeWinterCheckoutModal') {
+    if (event.data === 'closeWinterCheckoutModal') {
       setShowWinter(false);
     }
   });
@@ -24,20 +24,21 @@ const App = () => {
 
   return (
     <div className="App">
-      {showWinter && (<iframe id="winter-checkout" src="https://checkout.usewinter.com/?projectId=1" allowtransparency="true" className="winter-iframe" ></iframe>)}
+      {/* {showWinter && (<iframe id="winter-checkout" src="https://checkout.usewinter.com/?projectId=1" allowtransparency="true" className="winter-iframe" ></iframe>)} */}
+      <WinterCheckout projectId={20} showModal={showWinter} production={false} />
       <div className="container">
         <div className="header-container">
           <p className="header">✨ Lailaland NFTs</p>
           <p className="sub-text">Beautiful places I've seen, loved and photographed. Minted on Solana with a <b>very</b> special checkout!</p>
-          {/* <button
+          <button
             className="cta-button connect-wallet-button"
             onClick={toggleWinter}
           >
             MINT YOUR NFT
-          </button> */}
+          </button>
         </div>
 
-        <p className="header">We're out of mints in this drop. Thanks for the love! </p>
+        {/* <p className="header">We're out of mints in this drop. Thanks for the love! </p> */}
 
         {/* <CandyMachine className="header" /> */}
         <div className="footer-container">
