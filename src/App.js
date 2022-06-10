@@ -24,7 +24,6 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* {showWinter && (<iframe id="winter-checkout" src="https://checkout.usewinter.com/?projectId=1" allowtransparency="true" className="winter-iframe" ></iframe>)} */}
       <WinterCheckout projectId={20} showModal={showWinter} production={false} />
       <div className="container">
         <div className="header-container">
